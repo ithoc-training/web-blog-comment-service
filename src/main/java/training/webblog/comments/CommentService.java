@@ -11,12 +11,12 @@ public class CommentService {
         this.commentRepository = commentRepository;
     }
 
-    public void commentArticle(Long articleId, String text, String author) {
+    public void commentArticle(Long articleId, String text, String username) {
 
         CommentEntity commentEntity = new CommentEntity();
         commentEntity.setArticleId(articleId);
         commentEntity.setText(text);
-        commentEntity.setAuthor(author);
+        commentEntity.setUsername(username);
         commentRepository.save(commentEntity);
     }
 

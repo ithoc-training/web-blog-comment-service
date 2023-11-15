@@ -14,11 +14,11 @@ public class CommentController {
         this.commentService = commentService;
     }
 
-    @PostMapping
+    @PostMapping("/comment")
     public ResponseEntity<Void> commentArticle(@RequestBody CommentRequestBody commentRequestBody) {
 
         commentService.commentArticle(commentRequestBody.getArticleId(),
-                commentRequestBody.getText(), commentRequestBody.getAuthor());
+                commentRequestBody.getText(), commentRequestBody.getUsername());
 
         return ResponseEntity.ok().build();
     }

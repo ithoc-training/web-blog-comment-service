@@ -9,6 +9,6 @@ public class CommentRequestBody {
 
     private Long articleId;
     private String text;
-    private String author;
+    private String username;
 
 }

@@ -32,7 +32,7 @@ public class WebBlogCommentServiceApplication {
                 CommentEntity commentEntity = new CommentEntity();
                 commentEntity.setArticleId(i + 1L);
                 commentEntity.setText(UUID.randomUUID().toString());
-                commentEntity.setAuthor(users[new Random().nextInt(users.length)]);
+                commentEntity.setUsername(users[new Random().nextInt(users.length)]);
                 commentRepository.save(commentEntity);
             }
         }
